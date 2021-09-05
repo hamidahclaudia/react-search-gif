@@ -1,18 +1,19 @@
 import _ from "lodash";
-import { useCallback } from 'react'
+import { useMemo, useCallback } from 'react'
 
 
 const SearchBar = ({ onEnter }) => {
 
-  const onKeyUp = (e) => {
-    debounce(e.target.value)
-  }
-
-  const debounce = useCallback(
-    _.debounce((value) => {
+  const debounce = useMemo(() => 
+    _.debounce(value => {
       onEnter(value);
-    }, 300), [onEnter]
-  );
+    }, 300), 
+  [onEnter]);
+
+  const onKeyUp = useCallback((e) => {
+    debounce(e.target.value)
+  }, 
+  [debounce])
 
   return (
     <div>
