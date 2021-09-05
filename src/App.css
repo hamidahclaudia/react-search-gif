@@ -58,12 +58,11 @@ html, body {
 .gif-box {
   margin: 0.5em;
   height: 400px;
-  width: 25%;
-  padding: 0.5em;
+  width: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: 10px 10px 10px whitesmoke;
+  box-shadow: 5px 5px 5px whitesmoke;
 }
 
 @media only screen and (max-width: 768px) {
@@ -71,6 +70,8 @@ html, body {
     width: 100%;
   }
 }
+
+
 
 
 
